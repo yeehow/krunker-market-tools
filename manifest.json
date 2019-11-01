@@ -1,0 +1,32 @@
+{
+    "name": "Krunker Market Tools",
+    "description": "Small improvements to the Krunker Market",
+    "version": "1.0",
+    "manifest_version": 2,
+    "icons": {
+        "128": "logo.png"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "content.js"
+            ],
+            "matches": [
+                "https://*.krunker.io/*"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "logo.png"
+    },
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "https://*.krunker.io/*"
+    ]
+}
